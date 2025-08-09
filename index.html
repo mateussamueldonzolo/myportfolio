@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="pt" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfólio Tailwind</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#7c5cff',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Fundo animado estilo GitHub */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(circle at 20% 20%, rgba(124,92,255,0.2) 0%, transparent 50%),
+                  radial-gradient(circle at 80% 30%, rgba(92,255,199,0.15) 0%, transparent 50%),
+                  radial-gradient(circle at 50% 80%, rgba(255,215,92,0.1) 0%, transparent 50%);
+      background-size: 200% 200%;
+      animation: moveBackground 12s ease-in-out infinite;
+      z-index: -1;
+    }
+
+    @keyframes moveBackground {
+      0% { background-position: 0% 0%; }
+      50% { background-position: 100% 100%; }
+      100% { background-position: 0% 0%; }
+    }
+  </style>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 min-h-screen flex items-center justify-center p-6">
+
+  <main class="w-full max-w-6xl bg-white/80 dark:bg-gray-800/80 backdrop-blur-md rounded-2xl shadow-xl p-8">
+    
+    <!-- HEADER -->
+    <section class="flex flex-col sm:flex-row sm:items-center gap-6 mb-8">
+      <div class="w-28 h-28 rounded-full overflow-hidden ring-0 ring-primary shadow-lg">
+        <img src="assets/img/user.jpeg" alt="Foto perfil" class="w-full h-full object-cover">
+      </div>
+      <div class="flex-1">
+        <h1 class="text-2xl font-bold">Matheus Donzolo</h1>
+        <p class="text-primary font-medium">Designer Gráfico •  UI Designer • Frontend Developer</p>
+        <p class="text-gray-600 dark:text-gray-400 mt-2 text-sm">
+          Crio interfaces limpas e responsivas com atenção aos detalhes e microinterações.
+        </p>
+      </div>
+<div class="flex gap-3">
+  <a href="#" class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 hover:bg-primary hover:text-white transition" title="LinkedIn">
+    <!-- LinkedIn -->
+    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M4.98 3.5C4.98 4.88 3.9 6 2.5 6S0 4.88 0 3.5 1.1 1 2.5 1 4.98 2.12 4.98 3.5zM.2 8h4.58v14H.2V8zM9.5 8h4.4v1.92h.06c.61-1.16 2.1-2.4 4.32-2.4C22.7 7.52 24 10.1 24 14.18V22H19.4v-6.26c0-1.5-.03-3.42-2.1-3.42-2.1 0-2.42 1.64-2.42 3.33V22H9.5V8z"/>
+    </svg>
+  </a>
+
+  <a href="#" class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 hover:bg-primary hover:text-white transition" title="GitHub">
+    <!-- GitHub -->
+    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M12 .5C5.8.5.9 5.4.9 11.6c0 4.8 3.1 8.9 7.4 10.4.5.1.7-.2.7-.5v-1.9c-3 0-3.6-.8-3.8-1.5-.1-.3-.6-1.5-1-1.8-.3-.2-.7-.7 0-.7.6 0 1 0 1.5.6.9 1.6 2.4 1.1 3 .8.1-.7.4-1.1.8-1.4-2.7-.3-5.5-1.4-5.5-6.2 0-1.4.5-2.5 1.2-3.4-.1-.3-.5-1.6.1-3.3 0 0 1-.3 3.4 1.2 1-.3 2-.4 3-.4s2.1.1 3 .4c2.4-1.5 3.4-1.2 3.4-1.2.6 1.7.2 3 .1 3.3.8.9 1.2 2 1.2 3.4 0 4.8-2.8 5.9-5.5 6.2.4.3.8 1 .8 2v3c0 .3.2.6.7.5 4.4-1.4 7.4-5.6 7.4-10.4C23.1 5.4 18.2.5 12 .5z"/>
+    </svg>
+  </a>
+
+  <a href="#" class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 hover:bg-primary hover:text-white transition" title="Behance">
+    <!-- Behance -->
+    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M9.99 10.5c0-1.04-.74-1.36-1.63-1.36H6.75v2.72h1.61c.89 0 1.63-.31 1.63-1.36zM21.09 13.33c0-1.02-.73-1.56-1.63-1.56-1.07 0-1.79.72-1.79 1.56h3.42zm2.58 3.22h-5.99c.17 1.03 1.01 1.51 2.01 1.51.85 0 1.61-.3 2.24-.92l1.21 1.25c-.9.94-2.1 1.4-3.5 1.4-2.43 0-4.16-1.65-4.16-4.07 0-2.39 1.68-4.04 4.07-4.04 2.15 0 3.92 1.37 3.92 4.04 0 .22-.03.45-.08.66zM12.03 14.4c0 1.56-1.17 2.77-3.26 2.77H6.75v2.38H4.5V8.5h4.27c2.02 0 3.18 1.16 3.18 2.64 0 1.07-.59 1.79-1.41 2.18 1.08.35 1.49 1.28 1.49 2.55zm4.13-6.77h4.81v1.5h-4.81v-1.5z"/>
+    </svg>
+  </a>
+</div>
+
+    </section>
+
+    <!-- CARDS -->
+<section class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+  <!-- LinkedIn -->
+  <a href="linkedin-projetos.html" class="block group">
+    <div class="bg-gray-100 dark:bg-gray-700 rounded-xl p-5 shadow-md transition transform group-hover:scale-[1.02] group-hover:shadow-xl">
+      <h3 class="text-lg font-semibold">LinkedIn</h3>
+      <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">
+        Rede profissional para networking e oportunidades.
+      </p>
+      <ul class="flex flex-wrap gap-2 mt-3">
+        <li class="px-3 py-1 bg-primary/20 text-primary rounded-full text-xs">Perfil</li>
+        <li class="px-3 py-1 bg-primary/20 text-primary rounded-full text-xs">Projetos</li>
+        <li class="px-3 py-1 bg-primary/20 text-primary rounded-full text-xs">Contatos</li>
+      </ul>
+    </div>
+  </a>
+
+  <!-- GitHub -->
+  <a href="github-projetos.html" class="block group">
+    <div class="bg-gray-100 dark:bg-gray-700 rounded-xl p-5 shadow-md transition transform group-hover:scale-[1.02] group-hover:shadow-xl">
+      <h3 class="text-lg font-semibold">GitHub</h3>
+      <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">
+        Repositórios e projetos de desenvolvimento.
+      </p>
+      <ul class="flex flex-wrap gap-2 mt-3">
+        <li class="px-3 py-1 bg-primary/20 text-primary rounded-full text-xs">Código</li>
+        <li class="px-3 py-1 bg-primary/20 text-primary rounded-full text-xs">Contribuições</li>
+        <li class="px-3 py-1 bg-primary/20 text-primary rounded-full text-xs">Projetos</li>
+      </ul>
+    </div>
+  </a>
+
+  <!-- Behance -->
+  <a href="behance-projetos.html" class="block group">
+    <div class="bg-gray-100 dark:bg-gray-700 rounded-xl p-5 shadow-md transition transform group-hover:scale-[1.02] group-hover:shadow-xl">
+      <h3 class="text-lg font-semibold">Behance</h3>
+      <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">
+        Portfólio de design e trabalhos criativos.
+      </p>
+      <ul class="flex flex-wrap gap-2 mt-3">
+        <li class="px-3 py-1 bg-primary/20 text-primary rounded-full text-xs">Projetos</li>
+        <li class="px-3 py-1 bg-primary/20 text-primary rounded-full text-xs">Identidade Visual</li>
+        <li class="px-3 py-1 bg-primary/20 text-primary rounded-full text-xs">UI/UX</li>
+      </ul>
+    </div>
+  </a>
+
+</section>
+
+
+  </main>
+
+</body>
+</html>
